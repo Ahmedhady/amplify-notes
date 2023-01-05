@@ -74,7 +74,7 @@ export default function NavBar(props) {
         {...getOverrideProps(overrides, "Buttons")}
       >
         <Button
-          border="1px SOLID rgba(255,255,255,1)"
+          border="1px SOLID rgba(13,26,38,1)"
           shrink="0"
           size="default"
           isDisabled={false}
@@ -83,7 +83,7 @@ export default function NavBar(props) {
           {...getOverrideProps(overrides, "Button31632483")}
         ></Button>
         <Button
-          border="1px SOLID rgba(255,255,255,1)"
+          border="1px SOLID rgba(13,26,38,1)"
           shrink="0"
           size="default"
           isDisabled={false}

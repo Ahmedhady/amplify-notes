@@ -23,7 +23,7 @@ export default function NoteUICollection(props) {
   return (
     <Collection
       type="grid"
-      isSearchable={true}
+      isSearchable="true"
       isPaginated={true}
       searchPlaceholder="Search..."
       itemsPerPage={9}
@@ -40,7 +40,7 @@ export default function NoteUICollection(props) {
           note={item}
           height="auto"
           width="auto"
-          margin="10px 0 0 0"
+          margin="10px 10px 10px 10px"
           key={item.id}
           {...(overrideItems && overrideItems({ item, index }))}
         ></NoteUI>

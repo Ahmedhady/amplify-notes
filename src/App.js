@@ -1,22 +1,21 @@
-
 import { CreateNote, NavBar,  NoteUICollection, UpdateNote } from './ui-components'
 import {useState } from 'react'
 
 import { withAuthenticator } from '@aws-amplify/ui-react'
-import { DataStore } from 'aws-amplify'
+//import { DataStore } from 'aws-amplify'
 
 function App ({ signOut }) {
   const [showCreateModel, setShowCreateModel] = useState(false)
   const [showUpdateModel, setShowUpdateModel] = useState(false)
-  const [updateNote, setUpdateNote] = useState()
+  const [updateNote, setUpdateNote] = useState(0)
   return (
     <>
       <NavBar width="100%" marginBottom='20px' overrides={{
         Button31632483: { onClick: () => setShowCreateModel(true) },
         Button31632487: { 
           onClick: async () => {
-            await DataStore.clear()
             signOut()
+            //await DataStore.clear()
         }}
         }}
         />
@@ -51,5 +50,4 @@ function App ({ signOut }) {
    </>
   );
 }
-
 export default withAuthenticator(App)

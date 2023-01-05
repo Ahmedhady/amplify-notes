@@ -126,11 +126,11 @@ export default createTheme({
         paddingInlineEnd: {
           value: "{components.fieldcontrol.paddingInlineEnd.value}",
         },
-        borderColor: { value: "hsl(210, 100%, 99%)" },
+        borderColor: { value: "{components.fieldcontrol.borderColor.value}" },
         borderWidth: { value: "{components.fieldcontrol.borderWidth.value}" },
         borderStyle: { value: "{components.fieldcontrol.borderStyle.value}" },
         borderRadius: { value: "{components.fieldcontrol.borderRadius.value}" },
-        color: { value: "white" },
+        color: { value: "{colors.font.primary.value}" },
         _hover: {
           color: { value: "{colors.font.focus.value}" },
           backgroundColor: { value: "{colors.brand.primary.10.value}" },
@@ -163,8 +163,8 @@ export default createTheme({
           borderColor: { value: "transparent" },
           borderWidth: { value: "{borderWidths.small.value}" },
           borderStyle: { value: "solid" },
-          backgroundColor: { value: "{colors.brand.primary.60.value}" },
-          color: { value: "hsl(0, 0%, 100%)" },
+          backgroundColor: { value: "{colors.brand.primary.80.value}" },
+          color: { value: "{colors.font.inverse.value}" },
           _disabled: {
             borderColor: { value: "transparent" },
             backgroundColor: { value: "{colors.background.disabled.value}" },
@@ -1230,13 +1230,13 @@ export default createTheme({
       },
       brand: {
         primary: {
-          10: { value: "{colors.purple.10.value}" },
-          20: { value: "{colors.purple.20.value}" },
-          40: { value: "{colors.purple.40.value}" },
-          60: { value: "{colors.purple.60.value}" },
-          80: { value: "{colors.purple.80.value}" },
-          90: { value: "{colors.purple.90.value}" },
-          100: { value: "{colors.purple.100.value}" },
+          10: { value: "{colors.teal.10.value}" },
+          20: { value: "{colors.teal.20.value}" },
+          40: { value: "{colors.teal.40.value}" },
+          60: { value: "{colors.teal.60.value}" },
+          80: { value: "{colors.teal.80.value}" },
+          90: { value: "{colors.teal.90.value}" },
+          100: { value: "{colors.teal.100.value}" },
         },
         secondary: {
           10: { value: "{colors.teal.10.value}" },
@@ -1274,9 +1274,9 @@ export default createTheme({
         success: { value: "{colors.green.20.value}" },
       },
       border: {
-        primary: { value: "{colors.neutral.60.value}" },
-        secondary: { value: "{colors.neutral.40.value}" },
-        tertiary: { value: "{colors.neutral.20.value}" },
+        primary: { value: "{colors.neutral.40.value}" },
+        secondary: { value: "{colors.neutral.20.value}" },
+        tertiary: { value: "{colors.neutral.10.value}" },
         disabled: { value: "{colors.border.tertiary.value}" },
         focus: { value: "{colors.brand.primary.100.value}" },
         error: { value: "{colors.red.80.value}" },

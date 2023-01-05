@@ -10,11 +10,18 @@ import { Note } from "../models";
 import {
   getOverrideProps,
   useDataStoreDeleteAction,
+  useDataStoreUpdateAction,
 } from "@aws-amplify/ui-react/internal";
 import { schema } from "../models/schema";
 import { Flex, Icon, Text, View } from "@aws-amplify/ui-react";
 export default function NoteUI(props) {
   const { note, overrides, ...rest } = props;
+  const editButtonOnClick = useDataStoreUpdateAction({
+    fields: {},
+    id: note?.id,
+    model: Note,
+    schema: schema,
+  });
   const myIconOnClick = useDataStoreDeleteAction({
     id: note?.id,
     model: Note,
@@ -105,6 +112,9 @@ export default function NoteUI(props) {
               shrink="0"
               position="relative"
               padding="0px 0px 0px 0px"
+              onClick={() => {
+                editButtonOnClick();
+              }}
               {...getOverrideProps(overrides, "EditButton")}
             >
               <Icon
